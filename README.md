@@ -5,4 +5,4 @@
 * Angular Route
 * Bootstrap
 * Animate.css
-### Just Open the game in Browser(Microsoft Edge) and click on start.html and you ar e good to go!!! ##
+#### Just open the game in Browser(Microsoft Edge) and click on Start.html and you are good to go!!! ####
