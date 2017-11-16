@@ -1,0 +1,82 @@
+
+    
+    
+      <div  ng-controller="labCtrls as lab">
+        <div class="container s1" ng-hide="lab.show">
+            <div class="row">
+               <button type="button" class="col-xs-1 left1 b1"><img  src= "{{face[0].name}}.svg"  alt="player1" height="150" width="150" ><figcaption  style="color:aqua;margin-left:25px"><h4>Player1:{{lab.enter}}</h4></figcaption></button>          
+               <button type="button" height="200" width="200" style="margin-left:-300px;margin-top:250px;height:100px;width:200px;" class=" col-xs-1 btn btn-warning button1 animated swing"><h1>Score:{{lab.count1}}</h1></button>
+                <button type="button"  class="col-xs-1 right1 b1"><img  src= "{{face[1].name}}.svg"  alt="player1" height="150" width="150" ><figcaption   style="color:aqua;margin-left:30px"><h4>Player2:{{lab.enter1}}</h4></figcaption></button>
+                <button type="button" style="margin-top:-90px;height:100px;width:200px;" class="col-xs-1 right1 btn btn-warning button1 animated swing"><h1>Score:{{lab.count2}}</h1></button>
+                <button  ng-repeat="b1 in lab.a[0]"  class="col-xs-2 btn btn-primary button1 "  ng-click="lab.add(b1)" ng-disabled="b1.id">
+                <img ng-show="b1.id" height="50" width="50" ng-src="{{b1.value}}">
+                </button>  
+            </div>       
+        </div>  
+        <div class="container " ng-hide="lab.show">
+            <div class="row">
+                <button  ng-repeat="b1 in lab.a[1]"  class="col-xs-2 btn btn-primary button1 "  ng-click="lab.add(b1)" ng-disabled="b1.id" >
+                   <img ng-show="b1.id" height="50" width="50" ng-src="{{b1.value}}">
+                </button>
+            </div>
+        </div>  
+        <div class="container " ng-hide="lab.show">
+            <div class="row"> 
+                <button  ng-repeat="b1 in lab.a[2]"  class="col-xs-4 btn btn-primary button1 "  ng-click="lab.add(b1)" ng-disabled="b1.id">
+                   <img ng-show="b1.id" height="50" width="50" ng-src="{{b1.value}}">
+                </button>   
+            </div>      
+        </div> 
+        <div class="container " ng-hide="lab.show">
+            <div class="row"> 
+                <button  ng-repeat="b1 in lab.a[3]"  class="col-xs-4 btn btn-primary button1 "  ng-click="lab.add(b1)" ng-disabled="b1.id">
+                   <img ng-show="b1.id" height="50" width="50" ng-src="{{b1.value}}">
+                </button>   
+            </div>      
+        </div> 
+        <span  ng-show="lab.flag" >
+         <h1 ng-show="lab.result" class="high1"> Congratulations!!<br>Winner of this game is {{lab.check}}</h1>
+         <h1 ng-show="lab.result1" class="high1"> {{lab.check}}</h1>
+        <h1 class=" e1 s1 animated wobble" >Game Over..!!!</h1>
+        <button style="height:50px;width:100px;" type="button" class="btn btn-danger bu e1 animated bounceInUp" ng-click="lab.restart()">Restart</button>
+        <a href="#!/"> <button style="height:50px;width:100px;" type="button" class="btn btn-danger bu animated bounceInUp" ng-click="lab.replay()">LEVEL1</button></a>
+        
+    </span>
+        
+        <span ng-show="lab.digit" >
+        <button type="button" class="b1" ng-click="lab.value('Tom')"><img  src="Tom.svg"  height="150" width="150" ><figcaption style="color:aqua;"><h4>Tom</h4></figcaption> </button>
+         <button type="button" class="b1" ng-click="lab.value('Alley')"><img src="Alley.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Alley</h4></figcaption></button><br>
+         <button type="button" class="b1" ng-click="lab.value('Harry')"> <img src="Harry.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Harry</h4></figcaption></button>
+          <button type="button" class="b1" ng-click="lab.value('Nia')"><img src="Nia.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Nia</h4></figcaption></button>
+        
+          <div class="container">
+           <div class="row">
+            <p class="p1 col-xs-4">Player 1:<br><input type="text" class="c1" ng-model="lab.enter"></p><p class="p1 col-xs-4">Player 2:<br><input type="text" class="c1" ng-model="lab.enter1"></p>
+          </div>
+          </div>
+          <div class="container">
+              <div class="row">
+          <button  style="width:100px;"  type="button" class="btn btn-danger start-button1 col-xs-2 " ng-click="lab.show1()">Start</button>
+          <button  style="width:100px;" type="button" class="btn btn-danger start-button1 col-xs-2" ng-click="lab.restart()">Restart</button>
+          <button type="button" ng-show="lab.pic" class="player1 col-xs-4 b1"> <img height="150" width="150" src= "{{lab.face1[0].name}}.svg" ></button>
+        <button type="button"ng-show="lab.pic1" class="player21 col-xs-4 b1">  <img  height="150" width="150" src= "{{lab.face1[1].name}}.svg" ></button>
+        
+            </div>
+          </div>
+            
+ </span>
+        <span ng-show="lab.visible">
+        <h1 style="color:white;"> Choose color of your Apple by specifying name of the Player under the basket</h1>
+        <button type="button" style="margin-left:50px;margin-top:100px;" class="b1"> <img   height="400" width="400" src="c1.png"></button>
+        <div class="container">
+         <div class="row">
+         <button type="button" ng-click="lab.set('a.png')" style="margin-left:-400px;margin-top:100px;" class="col-xs-6 b1"><img  height="200" width="200" src= "a1.png" ><p class="player11">Player 1:<br><input type="text" class="c1" ng-model="lab.enter"></p></button> 
+         <button type="button" ng-click="lab.set('b.png')" style="margin-left:600px;margin-top:100px;" class="col-xs-6 b1"> <img  class= height="200" width="200" src= "b1.png" ><p class="player11">Player 1:<br><input type="text" class="c1" ng-model="lab.enter1"></p></button> 
+            </div>
+            </div>
+          <button style="width:100px;margin-left:200px;margin-top:-100px;"  type="button" class="btn btn-danger" ng-click="lab.show2()"> Start</button>
+        </span>
+     </div>
+        
+   
+

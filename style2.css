@@ -1,0 +1,97 @@
+.bu:hover 
+  {
+    background-color: #4CAF50; /* Green */
+     color: white;
+   }
+   div {
+      margin-left: 450px;
+       width: 500px;
+       background-color: black
+       }
+       .b
+       {
+           border: 2px solid black;
+           background-color: black;
+       }
+   .button
+    {
+      
+        height:130px;
+        width: 150px;
+      
+    }
+    .s
+    {
+        margin-top: 100px;
+    }
+    .d
+    {
+        background-color: black
+    }
+    .e
+    {
+        margin-left:120px;
+        color: white;
+    }
+    .f
+    {
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+    .c
+    {
+        background-color: rosybrown;
+        color: black;
+        width: 150px;
+       margin-top: 0px;
+        margin-left: 0px
+    }
+    .p
+    {
+        margin-top: 80px;
+        margin-left:25px;
+        color: white;
+    }
+    .start-button
+    {
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+    .start-button
+    {
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+    .player
+    {
+        margin-left: -450px;
+       
+    }
+    .player1
+    {
+        margin-left: 200px;
+       
+    }
+    .player2
+    {
+        margin-left: -8px;
+       
+    }
+    .player3
+    {
+        margin-left: 500px;
+       
+    }
+    .left
+    {
+        margin-left: -300px;
+    }
+    .right
+    {
+        margin-left: 600px;
+    }
+    .high
+    {
+        color:rosybrown;
+        margin-left: 100px;
+    }

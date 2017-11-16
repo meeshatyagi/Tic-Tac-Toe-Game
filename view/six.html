@@ -1,0 +1,71 @@
+
+    
+      <div  ng-controller="labCtrl as lab"  >
+        <div class="container s" ng-hide="lab.show" >
+            <div class="row">
+               <button type="button" class="col-xs-3 left b"><img  src= "{{face1[0].name}}.svg"  alt="player1" height="200" width="200" ><figcaption  style="color:aqua;"><h6>Player1</h6><h4>{{lab.enter}}</h4></figcaption></button>
+             <button type="button" class="col-xs-3 right b"><img  src= "{{face1[1].name}}.svg"  alt="player1" height="200" width="200" ><figcaption   style="color:aqua;"><h6>Player2</h6><h4>{{lab.enter1}}</h4></figcaption></button>
+
+                <button  ng-repeat="b1 in lab.a[0]"  class="col-xs-2 btn btn-warning button "  ng-click="lab.add(b1)" ng-disabled="b1.value">
+                <h1> {{b1.value}}</h1>
+                </button>  
+            </div >       
+        </div>  
+        <div class="container " ng-hide="lab.show">
+            <div class="row">
+            
+                <button  ng-repeat="b1 in lab.a[1]"  class="col-xs-4 btn btn-warning button "  ng-click="lab.add(b1)" ng-disabled="b1.value" >
+                   <h1> {{b1.value}}</h1>
+                </button>
+            
+            </div >
+              
+        </div>  
+        <div class="container " ng-hide="lab.show">
+            <div class="row">
+            
+                <button  ng-repeat="b1 in lab.a[2]"  class="col-xs-4 btn btn-warning button "  ng-click="lab.add(b1)" ng-disabled="b1.value">
+                   <h1>  {{b1.value}} </h1>
+                </button>
+            
+            </div>
+              
+        </div> 
+
+        <span  ng-show="lab.flag" >
+         <h1 ng-show="lab.result" class="high"> Congratulations!!<br>Winner of this game is {{lab.check}}</h1>
+         <h1 ng-show="lab.result1" class="high"> {{lab.check}}</h1>
+        <h1 class=" e s animated wobble" >Game Over..!!!</h1>
+        <button style="height:50px;width:100px;" type="button" class="btn btn-danger bu e animated bounceInUp" ng-click="lab.restart()">Restart</button>
+        <button style="height:50px;width:100px;" type="button" class="btn btn-danger bu animated bounceInUp" ng-click="lab.replay()">Replay</button>
+        
+    <a href="#!/sixth"><button  style="height:50px;width:100px;"  type="button" class="btn btn-danger bu animated bounceInUp">LEVEL: 2</button></a><br>
+        </span>
+        
+        <span ng-show="lab.digit" >
+        <button type="button" class="b" ng-click="lab.value('Tom')"><img  src="Tom.svg"  height="150" width="150" ><figcaption style="color:aqua;"><h4>Tom</h4></figcaption> </button>
+         <button type="button" class="b" ng-click="lab.value('Alley')"><img src="Alley.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Alley</h4></figcaption></button>
+         <button type="button" class="b" ng-click="lab.value('Harry')"> <img src="Harry.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Harry</h4></figcaption></button>
+          <button type="button" class="b" ng-click="lab.value('Nia')"><img src="Nia.svg"  height="150" width="150"><figcaption style="color:aqua;"><h4>Nia</h4></figcaption></button>
+        
+          <div class="container">
+           <div class="row">
+            <p class="p col-xs-4">Player 1:<br><input type="text" class="c" ng-model="lab.enter"></p><p class="p col-xs-4">Player 2:<br><input type="text" class="c" ng-model="lab.enter1"></p>
+          </div>
+          </div>
+          <div class="container">
+              <div class="row">
+          <button  style="width:100px;" type="button" class="btn btn-danger start-button col-xs-2 " ng-click="lab.show1()">Start</button>
+          <button  style="width:100px;" type="button" class="btn btn-danger start-button col-xs-2" ng-click="lab.restart()">Restart</button>
+          <button type="button" ng-show="lab.pic" class="player col-xs-4 b"> <img height="150" width="150" src= "{{face1[0].name}}.svg" ></button>
+        <button type="button"ng-show="lab.pic1" class="player2 col-xs-4 b">  <img  height="150" width="150" src= "{{face1[1].name}}.svg" ></button>
+        
+            </div>
+          </div>
+            
+ </span>
+          
+     </div>
+        
+
+

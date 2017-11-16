@@ -1,0 +1,155 @@
+
+<html>
+    <head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+            .myButton {
+	-moz-box-shadow:inset 0px 1px 3px 0px #dcf069;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #dcf069;
+	box-shadow:inset 0px 1px 3px 0px #dcf069;
+	background-color:transparent;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #e6e661;
+	display:inline-block;
+	cursor:pointer;
+	color:#d6e048;
+	font-family:Trebuchet MS;
+	font-size:14px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.game
+         {
+          background-image: url('f.jpeg');
+         }
+.d
+{
+    margin-left: 600px;
+    margin-top: 10px;
+    width: 150px
+}
+</style>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+<body class="game">
+		
+    <button id="myBtn" type="button" style="margin-top:300px" class="myButton .myButton:hover .myButton:active d">Instructions</button>
+   <a href="file:///D:/AngularJS/Lab2/index.html" target="_self"> <button  class="myButton .myButton:hover .myButton:active d">Play Now</button></a><br>
+   <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">Instructions</h4>
+			</div>
+			<div class="modal-body">
+			  <p>1) There are 2 LEVELS in this Game.</p><br>
+			  <p>2) Click on Play Now to start the game.</p><br>
+			  <p>3) Four Animated characters will appear on the screen.You have to choose a character by clicking on the character.</p><br>
+			  <p>4) Specify names of Player1 and Player2 to start the game.To reset the game click on Restart button</p><br>
+			  <p>5) After completing LEVEL 1, you can either replay,restart or jump to LEVEL2.</p><br>
+			  <p>6) In LEVEL 2,Player1 and Player2 have to choose color of the Apple(green or red) by specifying the name of the player in the textbox under apple basket and click on start button.</p><br>
+			  <p>7) There are Green,Red and Rotten apples behind the buttons.Both the players will click on button chance-by-chance.If Player1 has choosen red apple and clicks on a red apple then Player1 will gain 1 mark,If it clicks on green apple it won't gain any marks and if it clicks on a Rotten apple one mark would be deducted from the score and vice-versa will happen with Player2.</p><br>
+			  <p>8) Game will be Over when all the buttons would be clicked and winner of LEVEL2 will appear according to the Score.</p><br>
+			</div>
+			
+		  </div>
+		  
+		</div>
+	  </div>
+	  
+	</div>
+	
+	<script>
+	$(document).ready(function(){
+		$("#myBtn").click(function(){
+			$("#myModal").modal();
+		});
+	});
+	</script>
+</body>
+</html>
